@@ -1,0 +1,62 @@
+$shadow: 0px 24px 32px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04)
+
+.swiper
+    &-container
+        width: 50em
+        height: 650px
+        z-index: -10
+    &-slide
+        display: flex
+        background-position: center
+        border-radius: 15px
+        align-self: center
+        width: 22.5em !important
+        height: 600px !important
+        background-size: cover
+        opacity: 0
+        box-shadow: $shadow
+        .quick-info
+            display: none
+        &-active
+            width: 22.5em !important
+            height: 650px !important
+            opacity: 1
+            .quick-info
+                display: block
+        &-next
+            opacity: .25
+            z-index: -2 !important
+        &-prev
+            opacity: .25
+
+.rewards .swiper
+    &-container
+        width: 30em
+        height: 350px
+    &-slide
+        width: 12.5em !important
+        height: 300px !important
+        border-radius: 5px
+        &-active
+            width: 12.5em !important
+            height: 350px !important
+
+.reviews .swiper
+    &-container
+        width: 90em
+        height: 350px
+    &-slide
+        width: 30em !important
+        height: 300px !important
+        display: block
+        background: #cccccc
+        &-content
+            margin: 25px 30px
+        &-active
+            height: 350px !important
+            background: white
+            box-shadow: $shadow
+        h3
+            margin: 0
+            padding: 0
+            margin-bottom: 10px

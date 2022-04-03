@@ -1,0 +1,63 @@
+$white: #FFFFFF
+$red: #2942e4
+$shadow: 0px 24px 32px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04)
+
+@import font/stylesheet
+
+.popup-form
+    display: none
+    background-color: #fff
+    position: fixed
+    top: 50%
+    left: 50%
+    height: 625px
+    width: 550px
+    margin: -312.5px 0 0 -275px
+    padding: 5.5vh 3.5vw
+    box-shadow: $shadow
+    z-index: 2
+    *
+        width: 100%
+    input[type="text"]
+        margin-top: 25px
+        padding: 20px 25px
+        height: 50px
+        font-family: 'Avenir Next Cyr', sans-serif
+        font-weight: 600
+        font-size: 16px
+        border: none
+        box-shadow: $shadow
+        &:focus
+            outline: none
+    textarea
+        margin-top: 25px
+        padding: 20px 25px
+        height: 300px
+        font-family: 'Avenir Next Cyr', sans-serif
+        font-weight: 600
+        font-size: 16px
+        resize: vertical
+        border: none
+        box-shadow: $shadow
+        &:focus
+            outline: none
+    input[type="submit"]
+        margin-top: 35px
+        margin-bottom: 35px
+        height: 45px
+        background-color: $red
+        color: $white
+        font-family: 'Avenir Next Cyr', sans-serif
+        font-weight: 600
+        font-size: 16px
+        cursor: pointer
+        border: none
+        box-shadow: $shadow
+        transition: .2s
+        &:hover
+            background-color: $white
+            color: $red
+        &:focus
+            background-color: $white
+            color: $red
+            outline: none

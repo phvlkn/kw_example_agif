@@ -1,0 +1,345 @@
+$white: #FFFFFF
+$gray: #F6F6F6
+$dark-gray: #ECECEC
+$darker-gray: #E1E1E1
+$dark: #1C1E2D
+$black: #3E3E3E
+$accent: #9932CC
+$shadow: 0px 24px 32px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 0px 1px rgba(0, 0, 0, 0.04)
+
+$primary: #9932CC
+
+@import "../node_modules/bootstrap/scss/bootstrap"
+
+body
+    margin: 0
+    padding: 0
+    background-color: $gray
+    font-family: "Akrobat", sans-serif
+    letter-spacing: .3px
+    font-size: 18px
+    font-weight: normal
+    color: $black
+    text-rendering: optimizeLegibility !important
+    -webkit-font-smoothing: antialiased !important
+    overflow-x: hidden
+
+*
+    box-sizing: border-box
+    scrollbar-color: transparent transparent
+    scrollbar-width: 0px
+
+*::-webkit-scrollbar
+    width: 0
+
+*::-webkit-scrollbar-track
+    background: transparent
+
+ol li
+    list-style: none
+    margin: 0
+    padding: 0
+
+a
+    color: $black
+    text-decoration: none
+    transition: .2s
+    &:hover
+        color: $accent
+
+.btn-light
+    color: $primary
+
+header
+    .container
+        padding-top: 5px
+        padding-bottom: 5px
+    .navbar
+        &-brand
+            text-transform: uppercase
+            font-weight: bold
+            font-size: 26px
+        &-toggler
+            border: none
+
+.sub-header
+    margin-top: 25px
+
+section:not(.home):not(.sub-header):not(.article):not(.about)
+    padding-top: 20px
+    padding-bottom: 20px
+    h3
+        padding-bottom: 20px
+        text-align: center
+
+.home
+    height: auto
+    .row
+        min-height: 775px
+    .carousel
+        margin-right: 25%
+        max-width: 350px
+        color: $black
+        box-shadow: $shadow
+        &-item
+            height: 550px
+            background-size: cover
+            background-position: center
+        &-caption
+            display: none
+    .text
+        h5
+            font-size: 32px
+            font-weight: 700
+        p
+            text-overflow: ellipsis
+            word-wrap: break-word
+            overflow: hidden
+            max-height: 4.3em
+
+.quick-info
+    position: absolute
+    top: 45%
+    .title
+        margin-bottom: 5px
+        font-size: 32px
+        font-weight: 700
+        .description
+            display: block
+            text-overflow: ellipsis
+            word-wrap: break-word
+            overflow: hidden
+            max-height: 3.6em
+        a
+            display: block
+            margin-top: 25px
+            padding: 11px 25px
+            width: 130px
+            background-color: $accent
+            border: none
+            color: $white
+            cursor: pointer
+            transition: .2s
+            box-shadow: $shadow
+            &:hover
+                background-color: $white
+                color: $accent
+            &:focus
+                background-color: $white
+                color: $accent
+                outline: none
+
+.about
+    padding-top: 80px
+    padding-bottom: 80px
+    background-color: $dark
+    font-size: 22px
+    color: $white
+    img
+        width: 300px
+
+.rewards .reward
+    height: 220px
+    width: 150px
+    background-size: cover
+    background-position: center
+
+.reviews
+    color: $white
+    background-color: $dark
+    .card
+        color: $black
+        background-color: $white
+        min-height: 250px
+        &-title
+            font-weight: 700
+        &-subtitle
+            font-weight: 600
+
+.section
+    &-header
+        font-weight: 600
+        font-size: 24px
+
+.projects-section
+    display: flex
+    min-height: 650px
+
+.projects-empty
+    display: flex
+    align-items: center
+    justify-content: center
+    min-height: 650px
+    color: rgba(0, 0, 0, .6)
+
+.category .project-elem
+    max-height: 350px
+
+.project
+    width: 250px
+    height: 350px
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 1) 100%)
+    background-repeat: no-repeat
+    background-position-y: 100px
+    box-shadow: $shadow
+    transition: background .2s
+    img
+        position: relative
+        width: 250px
+        height: 350px
+        object-fit: cover
+        z-index: -1
+    h2
+        font-weight: 600
+        color: $white
+        margin-top: -3.4vh
+        margin-bottom: 0
+        margin-left: 1.5vw
+        opacity: 0
+        transition: .2s
+    &:hover
+        background-position-y: 0
+        h2
+            margin-top: -7vh
+            opacity: 1
+
+.project-elem
+    border: none
+
+.article
+    &-thumbnail
+        display: flex
+        padding-top: 50px
+        padding-bottom: 50px
+        z-index: -1
+        min-height: 650px
+        align-items: center
+        justify-content: center
+        img
+            width: 90%
+            max-width: 60%
+            box-shadow: $shadow
+    &-header
+        font-size: 32px
+        font-weight: 700
+        margin-bottom: 15px
+    &-content
+        padding: 100px 50px
+        font-size: 18px
+
+.faq
+    min-height: 650px
+    .row:not(:first-child), .card
+        margin-top: 5px
+
+.btn-collapse
+    padding: 0
+    display: flex
+    background-color: $dark-gray
+    height: 50px
+    align-items: center
+    &:hover
+        color: $black
+        .btn-collapse-icon
+            background-color: $primary
+            svg path
+                fill: $white
+    &-text
+        margin-left: 20px
+        font-size: 20px
+        font-weight: 600
+    &-icon
+        display: flex
+        background-color: $white
+        height: 50px
+        width: 50px
+        align-items: center
+        justify-content: center
+        transition: .2s
+
+form
+    input
+        padding: 20px 25px
+        font-family: 'Akrobat', sans-serif
+        font-weight: 600
+        font-size: 18px
+        border: none
+        box-shadow: $shadow
+        &:focus
+            outline: none
+        &[type="file"]
+            box-shadow: none
+    textarea
+        padding: 20px 25px
+        min-height: 250px
+        font-family: 'Akrobat', sans-serif
+        font-weight: 600
+        font-size: 18px
+        resize: vertical
+        border: none
+        box-shadow: $shadow
+        &:focus
+            outline: none
+    input[type="submit"]
+        margin-top: 35px
+        margin-bottom: 35px
+        padding: 20px 25px
+        height: 64px
+        background-color: $accent
+        color: $white
+        font-family: 'Akrobat', sans-serif
+        font-weight: 600
+        font-size: 18px
+        cursor: pointer
+        border: none
+        box-shadow: $shadow
+        transition: .2s
+        &:hover
+            background-color: $white
+            color: $accent
+        &:focus
+            background-color: $white
+            color: $accent
+            outline: none
+
+footer
+    padding-top: 15px
+    background-color: $dark
+    color: $white
+    a
+        color: $white
+    i
+        margin-right: 10px
+
+@media screen and ( min-width: 992px )
+    .carousel
+        width: 80%
+    .about img
+        margin-right: 85px
+
+@media screen and ( max-width: 992px )
+    .carousel
+        margin-right: 0
+        float: none !important
+
+@media screen and ( max-width: 576px )
+    .col
+        margin-top: 20px
+    .col-sm
+        margin-top: 20px
+    .about p
+        margin-top: 20px
+    .rewards .reward
+        height: 160px
+        width: 110px
+    .article
+        .col
+            margin: 0
+        .col-sm
+            margin: 0
+        &-thumbnail
+            min-height: 0
+            img
+                margin: 10px
+        &-content
+            padding: 20px 50px

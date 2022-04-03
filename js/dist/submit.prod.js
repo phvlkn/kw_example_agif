@@ -1,0 +1,1 @@
+"use strict";$(".review-form").on("submit",function(t){var e=$(this).serialize();$.ajax({type:"POST",url:"reviewform.php",data:e,success:function(){$("submit").css("background-color","rgb(0, 155, 0)"),$("submit:hover").css("color","white"),$("submit").attr("value","Отзыв отправлен.")}}),t.preventDefault()});

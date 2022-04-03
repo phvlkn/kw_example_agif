@@ -1,0 +1,1 @@
+"use strict";$(".register-form").validate({rules:{password:"required",confirmpassword:{equalTo:"#password"}},messages:{password:"Введите пароль.",confirmpassword:"Введённые пароли не совпадают"}}),validator.form()&&console.log("Success");

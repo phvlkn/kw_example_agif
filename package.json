@@ -1,0 +1,22 @@
+{
+  "name": "agif",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.php",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/T3RRY4/agif.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/T3RRY4/agif/issues"
+  },
+  "homepage": "https://github.com/T3RRY4/agif#readme",
+  "dependencies": {
+    "bootstrap": "^5.0.0-beta2"
+  }
+}
